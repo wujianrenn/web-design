@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.mf {
+    border: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px auto;
+}
+.item {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+.player {
+    background-color: rgb(19, 223, 19);
+}
+.eat {
+    background-color:rgb(90, 20, 212);
+}
