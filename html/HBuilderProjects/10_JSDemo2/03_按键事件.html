@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function fun1(){
+				console.info("按钮按下")
+			}
+			function fun2(){
+				console.info("按钮抬起")
+			}
+			function fun3(){
+				console.info("按钮按下并抬起")
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 在标签里写 -->
+		<input type="text" onkeydown="fun1()" onkeyup="fun2()" onkeypress="fun3()" />
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 链接时 引入外部JS文件
+				提高了代码的复用度
+				降低了代码维护的难度
+				1、一个页面可以同时引入多个不同的js文件
+				2、script标签一旦用于引入外部JS文件，就不能在中间定义内嵌式代码
+				3、一个页面上可以用多个script标签，位置也不是非得放到head标签中不可
+				4、src属性可以指向一个网络路径，就是第三种引入方式
+		-->
+		<script type="text/javascript" src="js/myJS01.js"></script>
+		<script type="text/javascript" src="js/myJS02.js"></script>
+		<script type="text/javascript" src="URL网络神经"></script>
+	</head>
+	<body>
+		<input type="button" value="点我呀" onclick="fun1()">
+		<input type="button" value="点我呀2" onclick="fun2()">
+		<input type="button" value="点我呀3" onclick="fun3()">
+		<script>
+			function fun3(){
+				alert("总能见到你");
+			}
+		</script>
+	</body>
+</html>

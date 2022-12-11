@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+ <head>
+          <meta charset="utf-8">
+          <title></title>
+          <style>
+                  #d1{
+                           width: 200px;
+                           height: 200px;
+                           border: 1px solid red;
+                           
+                  }
+          </style>
+          <script type="text/javascript" src="js/jquery.min.js" ></script>
+          <script>
+                  function fun1(){
+                  	  // 创建元素
+                      var span1=$("<span></span>");
+                      // 设置样式
+                      span1.css("color","green");
+                      span1.css("border","1px solid blue");
+                      span1.css("background-color","lightgray")
+                      // 设置文字
+                      span1.text("今天天气很好");
+                      
+                      
+                      $('#d1').append(span1)
+                      
+                  }
+                  function fun2(){
+                      var h =$("<h3>测试文字</h3>").css("color","red").css("border","1px solid green")
+                      h.appendTo($('#d1'))
+                  }
+                  function fun3(){
+                      var span1=$('<span style="color: red; border: 1px solid orangered;">测试文字</span>') 
+                      $("#d1").before(span1);//在d1的前面追加一个span1 
+                  }
+                  function fun4(){
+                      var span1=$('<span style="color: red; border: 1px solid orangered;">测试文字</span>') 
+                      span1.insertBefore($("#d1"));//span1插入到d1的前面	
+                  }
+                  function fun5(){
+                      var span1=$('<span style="color: red; border: 1px solid orangered;">测试文字</span>') 
+                      $("#d1").after(span1);
+                  }
+                  function fun6(){
+                      var span1=$('<span style="color: red; border: 1px solid orangered;">测试文字</span>') 
+                      span1.insertAfter($("#d1"));
+                  }
+                  function fun7(){
+                      $("#d1").empty()
+                  }
+                  function fun8(){
+                  	 $("#d1").remove(); // 移除当前元素本身
+                  }
+          </script>
+ </head>
+ <body>
+ 	
+ 	
+          <div id='d1'>
+          	
+          </div>
+          <input type="button" value="testAppend" onclick="fun1()" />
+          <input type="button" value="testAppendTo" onclick="fun2()" />
+          <input type="button" value="testbefore" onclick="fun3()" />
+          <input type="button" value="testinsertBefore" onclick="fun4()" />
+          <input type="button" value="testafter" onclick="fun5()" />
+          <input type="button" value="testInsertAfter" onclick="fun6()" />
+          <input type="button" value="empty" onclick="fun7()" />
+          <input type="button" value="remove" onclick="fun8()" />
+ </body>
+</html>

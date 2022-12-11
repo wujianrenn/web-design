@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+         <title>属性选择器</title>
+         <style type="text/css">
+             .myClass {
+                  background-color: aqua;
+             }
+         </style>
+         <script src="js/jquery.js"   type="text/javascript"   charset="utf-8"></script>
+         <script type="text/javascript">
+			 // 属性选择器
+			 
+			 // [attribute] 匹配包含给定属性的元素
+			 
+			 // [attribute1][attribute2] 复合属性选择器，需要同时满足多个属性
+			 
+			 // [attribute=value] 匹配给定的属性是某个特定值的元素
+			 
+			 // [attribute!=value] 匹配所有属性不等于特定值的元素
+			 
+			 // [attribute^=value] 匹配给定的属性是以某些值开始的元素
+			 
+			 // [attribute$=value] 匹配给定的属性是以某些值结尾的元素
+			 
+			 // [attribute*=value] 匹配给定的属性是以包含某些值的元素
+             $(function() {
+                  //[attribute] 
+                  //$("a").addClass("myClass"); 
+                  //$("a[href]").addClass("myClass"); 
+                  //[attribute1][attribute2] 
+                  //$("a[href][title]").addClass("myClass"); 
+                  //[attribute=value]   
+                  // $("a[href='film-2.html']").addClass("myClass"); 
+                  //[attribute!=value]   
+                  $("a[href][href!='film-2.html']").addClass("myClass"); 
+                  //[attribute^=value]   
+                  //$("a[href^='http']").addClass("myClass"); 
+                  //[attribute$=value   
+                  //$("a[href$='htm']").addClass("myClass"); 
+                  //[attribute*=value]   
+                  // $("a[href*='mashibing']").addClass("myClass");
+             });
+         </script>
+    </head>
+    <body>
+         <ul id="msb">
+             <li>
+                  <a href="http://www.mashibing.com/job.html">青花瓷</a>
+             </li>
+             <li>
+                  <a href="http://www.mashibing.com/dorm">小朋友,你是否有很多问号</a>
+             </li>
+             <li>
+                  <a href="http://www.mashibing.com/mobile">羞答答的玫瑰静悄悄的开</a>
+             </li>
+             <li>
+                  <a href="http://www.mashibing.com/flag">夜曲</a>
+             </li>
+             <li>
+                  <a href="http://www.msb.com/film">单恋一枝花</a>
+                  <ul id="film">
+                      <li>
+                          <a href="film-1.html">乱世佳人</a>
+                      </li>
+                      <li>
+                          <a href="film-2.html"   title="阿郎的故事">阿郎的故事</a>
+                      </li>
+                      <li id="film3">
+                          <a href="film-3.html">阿甘正传</a>
+                      </li>
+                      <li>
+                          <a href="http://www.mashibing.com/film/film-4.htm"   title="鲁冰花">鲁冰花</a>
+                      </li>
+                      <li>
+                          <a name="film-5.htm"   title="太行山上">太行山上</a>
+                      </li>
+                      <li>无问西东</li>
+                  </ul>
+             </li>
+         </ul>
+    </body>
+</html>

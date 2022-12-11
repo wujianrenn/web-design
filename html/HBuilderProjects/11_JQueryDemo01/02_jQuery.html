@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+         <title></title>
+         <!--引入jQuery文件-->
+         <script  src="js/jquery.min.js"></script>
+         <script>
+             $(function(){
+                  $("tr:odd").css("backgroundColor","yellowgreen")
+                  $("tr:even").css("backgroundColor","lightyellow")
+                  $("tr:first").css("backgroundColor","greenyellow")
+             })
+         </script>
+    </head>
+    <body>
+         <table class="datalist"   summary="list   of members in EE Studay" id="oTable">
+             <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Class</th>
+                  <th scope="col">Birthday</th>
+                  <th scope="col">Constellation</th>
+                  <th scope="col">Mobile</th>
+             </tr>
+             <tr>
+                  <td>isaac</td>
+                  <td>W13</td>
+                  <td>Jun   24th</td>
+                  <td>Cancer</td>
+                  <td>1118159</td>
+             </tr>
+             <tr>
+                  <td>fresheggs</td>
+                  <td>W610</td>
+                  <td>Nov   5th</td>
+                  <td>Scorpio</td>
+                  <td>1038818</td>
+             </tr>
+                  <td>girlwing</td>
+                  <td>W210</td>
+                  <td>Sep   16th</td>
+                  <td>Virgo</td>
+                  <td>1307994</td>
+             </tr>
+             <tr>
+                  <td>tastestory</td>
+                  <td>W15</td>
+                  <td>Nov   29th</td>
+                  <td>Sagittarius</td>
+                  <td>1095245</td>
+             </tr>
+         </table>
+    </body>
+</html>

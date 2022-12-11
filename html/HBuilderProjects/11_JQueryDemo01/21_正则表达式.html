@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title></title>
+                
+                <script>
+                        
+                        /*
+                         * 正则表达式不依赖jQuery
+                         * 正则表达式本身就是一个字符串 只不过该字符串用于表述一种规则
+                         * 
+                         * */
+                        
+                        var reg =/^\w?$/
+                        var words ="a";
+                        console.log(reg.test(words))
+                                          
+                        var regex1 = /^\d{6}$/;
+                        var regex2 = /^1[3456789]\d{9}$/;
+                        var regex3 = /^\w{6,}@[0-9A-Za-z]{2,}(\.[a-zA-Z]{2,3}){1,2}$/;  
+                </script>
+        </head>
+        <body>
+        </body>
+</html>

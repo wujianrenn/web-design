@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script>
+			// 不断的简化
+			// 原版
+			// jQuery(document).ready(function(){
+			// 	var dom = document.getElementById("s1")
+			// 	console.log(dom.innerText)
+			// })
+			
+			
+			// 简化1
+			// $(document).ready(function(){
+			// 	var dom = document.getElementById("s1")
+			// 	console.log(dom.innerText)
+			// })
+			
+			// 再度简化
+			$(function(){
+				var dom = document.getElementById("s1")
+				console.log(dom.innerText)
+			})
+			
+			// 可以添加多个页面加载函数
+			$(function(){
+				console.log("第二个页面加载函数")
+			})
+			$(function(){
+				console.log("第三个页面加载函数")
+			})
+		</script>
+	</head>
+	<body>
+		<span id="s1">测试文字</span>
+	</body>
+</html>

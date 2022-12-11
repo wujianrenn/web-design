@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+			<script>
+				/*
+				 * 第一种语法格式 常见
+				 * function 函数名(参数列表){js代码}
+				 * 
+				 * 
+				 * 第二种语法
+				 * var 函数名=function(参数列表){JS代码}
+				 * 
+				 * 第三种语法 不常用 了解
+				 * var 函数名=new Function('js代码')
+				 * 
+				 * */
+				function fun1(){
+					alert("你好");
+				}
+				
+				var fun2=function(){
+					alert("你很好")
+				}
+				
+				var fun3=new Function('alert("你非常好");');
+				// 调用方法
+				fun1();
+				fun2();
+				fun3();
+			</script>
+	</head>
+	<body>
+	</body>
+</html>

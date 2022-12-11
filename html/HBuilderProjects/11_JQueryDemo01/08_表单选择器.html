@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+         <title>表单选择器</title>
+         <style type="text/css">
+             .myClass {
+                  background-color: aqua;
+             }
+         </style>
+         <script src="js/jquery.js"   type="text/javascript"></script>
+         <script type="text/javascript">
+             $(function() {
+                  //:text   :password    :radio  :checkbox  :hidden    :file  :submit 
+                  //var arr =$("input"); // 标签名选择器
+                  
+                  //var arr = $("input[type=hidden]"); 
+                  //var arr = $("input:hidden");              
+                  //:input  匹配所有 input, textarea, select 和 button 元素 
+                  //var arr =   $("input,select,textarea,button");   
+                  var arr = $(":input"); 
+                  //:selected    :checked  :enabled  :disabled   
+                  // var arr = $(":disabled"); 
+                  //var arr = $(":enabled"); 
+                  //var arr = $(":input:not(:disabled)"); 
+                  //var arr = $(":checked"); 
+                  // var arr = $(":selected"); 
+                  //:hidden :visible       
+                  //var arr = $("input:hidden") 
+                 var   arr = $(":input:visible")
+                  for(var i = 0; i < arr.length; i++) {
+                      console.info(arr[i]);
+                  }
+             });
+         </script>
+    </head>
+    <body>
+         <h3>注册用户</h3>
+         <form action=""   method="get">
+             <table border="1"   width="40%">
+                  <tr>
+                      <td>用户名</td>
+                      <td>
+                      	  <input type="text"   name="username"   value="请输入姓名" />
+                          <input type="hidden"   name="username"   id="username"   value="请输入姓名"    />
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>密 码</td>
+                      <td><input type="password"   name="pwd"   id="pwd" disabled="disabled"   /></td>
+                  </tr>
+                  <tr>
+                      <td>确认密码</td>
+                      <td><input type="color"   name="repwd"   id="repwd"   /></td>
+                  </tr>
+                  <tr>
+                      <td>性别</td>
+                      <td>
+                           <input type="radio"   name="sex"   value="男" />男
+                           <input type="radio"   name="sex"   checked="checked"   value="女" />女
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>年龄</td>
+                      <td><input type="text"   min="6"   max="30"   name="age"   id="age"   value="18"   /></td>
+                  </tr>
+                  <tr>
+                      <td>电子邮箱</td>
+                      <td><input type="text"   name="email"   id="email"   /></td>
+                  </tr>
+                  <tr>
+                      <td>籍贯</td>
+                      <td>
+                          <select name="pro">
+                          	<option value="1">京</option>
+                          	<option value="2" selected="selected">津</option>
+                          	<option value="3">冀</option>
+                          </select>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>自我介绍</td>
+                      <td>
+                         <textarea name="intro"></textarea>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td colspan="2">
+                      	<input type="submit" />
+                      	<input type="reset" />
+                      	
+                      </td>
+                      
+                  </tr>
+             </table>
+         </form>
+    </body>
+</html>

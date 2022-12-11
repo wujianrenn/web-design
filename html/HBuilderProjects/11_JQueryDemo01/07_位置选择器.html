@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html> 
+      <head> 
+        <meta charset="utf-8"> 
+        <title>位置选择器</title> 
+        <style type="text/css"> 
+                 div{ 
+                      border: 1px solid  red; 
+                } 
+                .myClass{ 
+                      background-color:  aqua; 
+                } 
+        </style> 
+        <script src="js/jquery.min.js"   ></script>
+        <script type="text/javascript"> 
+            $(function(){ 
+                //位置针对整个页面 
+                //:first     :last   :odd   :even   
+                //$("p:first").addClass("myClass"); 
+                //$("p:last").addClass("myClass"); 
+                //$("p:odd").addClass("myClass");//索引从0开始 奇数的索引 1 3 5 第偶数的元素
+                //$("p:even").addClass("myClass"); //
+                //:eq(n)     :gt(n)   :lt(n) 
+                //$("p:eq(4)").addClass("myClass");   //equals 
+                //$("p:lt(4)").addClass("myClass");//less   than  
+                $("p:gt(4)").addClass("myClass");//greater   than 
+                //位置针对上级标签 
+                //:first-child    :last-child   :only-child 
+                // $("p:first-child").addClass("myClass"); 
+                // $("p:last-child").addClass("myClass"); 
+                // $("p:only-child").addClass("myClass"); 
+                //:nth-child(n)   :nth-child(odd|even) :nth-child(xn+y)
+                  //索引从0开始 只有此处从1开始
+                // $("p:nth-child(2)").addClass("myClass");
+                //$("p:nth-child(odd)").addClass("myClass"); 
+                //$("p:nth-child(even)").addClass("myClass"); 
+                //$("p:nth-child(3n+1)").addClass("myClass");//n=0,1,2,3 
+            });
+        </script> 
+    </head>   
+    <body> 
+        <div> 
+            <p>1.   JavaSE</p>
+            <p>2.   Oracle</p>
+        </div> 
+        <div> 
+            <p>3.   HTML/CSS/JS</p>
+            <p>4.   jQuery/EasyUI</p>
+            <p>5.   JSP/Servlet/Ajax</p>
+        </div> 
+        <div> 
+            <p>6.   SSM</p>  
+            <p>7.   SpringBoot/SpringCloud/SpringData</p>
+            <p>8.   Maven/Linux/p> 
+            <p>9.   Redis/Solr/Nginx</p> 
+            <p>10.   SpringBoot/SpringCloud/SpringData</p> 
+            <p>11.   SpringBoot/SpringCloud/SpringData</p> 
+            <p>12.   SpringBoot/SpringCloud/SpringData</p> 
+        </div> 
+        <div> 
+            <p>13. 就业指导</p> 
+        </div> 
+    </body>  
+</html> 

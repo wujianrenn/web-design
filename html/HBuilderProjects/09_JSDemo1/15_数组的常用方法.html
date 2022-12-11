@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var arr =[1,2,3,4,5,6,7,8,9];
+			var index = arr.indexOf(7);//查询元素索引的方法
+			console.log(index);//查询7的索引
+			
+			//合并两个数组
+			var hege = ["Cecilie","Lone"];
+			var stale = ["Email","Tobias","Linus"];
+			var children = hege.concat(stale);
+			console.log(children);
+			
+			// 合并三个数组
+			var parents = ["Jani", "Tove"];
+			var brothers = ["Stale", "Kai Jim", "Borge"];
+			var children = ["Cecilie", "Lone"];
+			var family = parents.concat(brothers, children);
+			console.log(family);
+			
+
+			// 合并字符串
+			var fruits = ["Banana", "Orange", "Apple", "Mango"];
+			var fs =fruits.join();
+			console.log(fs);
+			
+			
+			// 移除最后一个元素
+			var fruit=fruits.pop();
+			console.log(fruits);
+			console.log(fruit);
+			
+			// 想结尾增加元素
+			fruits.push("Grape");
+			console.log(fruits);
+			
+			
+			//反转数组
+			fruits.reverse();
+			console.log(fruits);
+			
+			//删除数组第一个元素
+			var ss =fruits.shift();
+			console.log(fruits);
+			console.log(ss)
+			
+			//向第一个位置添加元素
+			fruits.unshift("火龙果");
+			console.log(fruits);
+			
+			// 截取子数组  从哪个索引开始,到哪个索引结束 包头不包尾
+			
+			var citrus = fruits.slice(1,3);
+			console.log(citrus);
+			
+			var numbers =[1,2,3,4,5,6,7,8,9];
+			/*
+			 * 删除数组中的某些元素
+			 * 2 从哪个索引开始删除
+			 * 3 删除多个少个元素
+			 * */
+			/*numbers.splice(2,3);
+			console.log(numbers)*/
+			/*
+			 * 如果第二个参数是0 那么就变成了在指定索引位置增加元素
+			 * */
+			numbers.splice(2,0,100);
+			console.log(numbers);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

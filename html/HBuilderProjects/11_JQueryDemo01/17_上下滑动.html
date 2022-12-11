@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="utf-8" />
+                <title>上下滑动</title>
+                <style>
+                        #d1{
+                                width: 200px;
+                                height: 200px;
+                                background-color: yellow;
+                                display: none;
+                        }
+                </style>
+                <script type="text/javascript" src="js/jquery.min.js"></script>
+                <script>
+                        function fun1(){
+                                
+                                $("#d1").slideDown(2000);
+                        }
+                        function fun2(){
+                                $("#d1").slideUp(3000)
+                        }
+                        function fun3(){
+                                $("#d1").slideToggle(5000);//
+                        }
+                </script>
+        </head>
+        <body>
+                <div id="d1"></div>
+                <input type="button" value="slideDown" onclick="fun1()" />
+                <input type="button" value="slideUp" onclick="fun2()" />
+                <input type="button" value="slideToggle" onclick="fun3()" />
+        </body>
+</html>

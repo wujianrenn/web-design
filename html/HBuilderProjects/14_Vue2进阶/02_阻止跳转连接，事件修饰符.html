@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 180px;
+            height: 180px;
+            background: gold;
+            margin: 100px auto;
+            padding: 30px;
+            border-radius: 50%;
+        }
+
+        .outer .center{
+            width: 130px;
+            height: 130px;
+            background: pink;
+            padding: 30px;
+            border-radius: 50%;
+        }
+
+        .outer .center .inner{
+            width: 130px;
+            height: 130px;
+            background: cyan;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <a href="https://www.baidu.com/" @click="alterDialog">点击跳转到百度</a>
+        <!-- 或者直接写成@click.prevent -->
+    </div>
+
+    <script src="js/Vue2.js"></script>
+    <script>
+        var vue = new Vue({
+            el:'#app',
+            methods:{
+                alterDialog(event){
+                    // 原生JavaScript代码
+                    event.preventDefault();
+
+                    alert('我是超级链接')
+                }
+            }
+        })
+    </script>
+</body>
+</html>

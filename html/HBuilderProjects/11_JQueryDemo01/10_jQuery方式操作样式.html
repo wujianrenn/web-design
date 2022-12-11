@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="UTF-8">
+         <title>10_jQuery方式操作样式</title>
+         <style>
+          .a{
+              width: 100px;
+              height: 100px;
+              background-color: pink;
+          }  
+          .b{
+              border: 10px solid green;
+              border-radius: 20px;
+          }
+         </style>
+         <script type="text/javascript"   src="js/jquery.min.js"   ></script>
+         <!--
+         	元素.style.样式名=
+         	css()
+         -->
+         <script>
+             function fun1(){
+                 //获得d1的css样式
+                 console.log($("#d1").css("width"));
+                 console.log($("#d1").css("height"));
+                 console.log($("#d1").css("background-color"));
+                 //修改d1的css样式
+                 
+                 $("#d1").css("width","200px")
+                 $("#d1").css("height","300px")
+                 $("#d1").css("background-color","yellow");
+             }
+             /*
+              * CSS 样式在实际的研发中,往往通过类选择器作用到元素上
+              * jQuery就专门的封装了操作class属性值的方法
+              * */
+           
+             function fun2(){
+                $("#d2").addClass("b")
+             }
+             function fun3(){
+                $("#d2").removeClass("b")
+             }
+             function fun4(){
+                $("#d2").toggleClass("b")// 原来有b 则删除,如果没有,则增加b
+             }
+         </script>
+    </head>
+    <body>
+         <div id="d1"class="a">
+         </div>
+         <input type="button"   value="修改样式" onclick="fun1()" />
+         <div id="d2"  class="a" >
+             d2
+         </div>
+         <input type="button"   value="添加class值" onclick="fun2()" />
+         <input type="button"   value="删除class值" onclick="fun3()" />
+         <input type="button"   value="切换class值" onclick="fun4()" />
+    </body>
+</html>

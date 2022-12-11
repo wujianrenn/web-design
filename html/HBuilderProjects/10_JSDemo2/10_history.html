@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title></title>
+                <script>
+                        function fun1(){
+                                window.history.forward();
+                                
+                        }
+                        function fun2(){
+                                history.back();
+                        }
+                        function fun3(){
+                                history.go(2); // 正整数 向前跳转 * 页  负整数 向后跳转*页
+                        }
+        
+                        
+                </script>
+        </head>
+        <body>
+                <a href="a.html" target="_self">pageA</a>
+                <input type="button" value="向前" onclick="fun1()"/>
+                <input type="button" value="向后" onclick="fun2()"/>
+                <input type="button" value="go" onclick="fun3()"/>
+        </body>
+</html>

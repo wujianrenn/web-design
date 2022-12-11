@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(function (){
+				//1、原生JS获取页面元素   原生DOM对象
+				var div1 = document.getElementById("d1");
+				
+				//2、jQuery方式获取页面元素   jQuery对象
+				var div2 = $("#d1");
+				//DOM对象和jQuery对象之间的方法和属性是不通用的
+				console.log(div1.innerText);
+				console.log(div2.text());
+				
+				console.log(div1)
+				console.log(div2)
+				
+				//DOM对象如何调用jQuery函数     DOM对象转换成jQuery     $(DOM)
+				console.log($("#d1").text());
+				//jQuery对象如何调用DOM对象的属性和方法    jQuery转换成DOM对象   get(0)   [0]
+				console.log(div2.get(0).innerText)
+				console.log(div2[0].innerText)
+			})
+		</script>
+	</head>
+	<body>
+		<div id="d1">测试文字</div>
+	</body>
+</html>

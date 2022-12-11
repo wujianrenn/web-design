@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>迭代遍历方式</title>
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function (){
+				var $lis = $('li')
+				console.log($lis)
+			
+			
+				for (var i = 0; i < $lis.length; i++) {
+					//遍历出的每个元素都是DOM对象
+					console.log($lis[i].innerText);
+				}
+				
+				
+				for (var i in $lis) {
+					console.log($lis[i].innerText)
+				}
+				
+				
+				//遍历所有元素的方法
+				 // each每拿出一个元素  都会执行一次内部的function 
+				 // i 当前元素的所有
+				 // e 当前元素的DOM对象
+				 $lis.each(function(i,e){
+					 console.log(i + '>>>' + $(e).text())
+				 })
+				 
+				 
+				 $.each($lis,function(i,e){
+					 console.log(i + '>>>' + $(e).text())
+				 })
+			})
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>AI</li>
+			<li>Python</li>
+			<li>大数据</li>
+			<li>Java</li>
+			<li>前端</li>
+		</ul>
+	</body>
+</html>

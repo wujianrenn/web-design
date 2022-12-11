@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script>
+		// 准备一个构造方法 
+		function Person(pname,page){
+			this.pname=pname;
+			this.page=page;
+			
+			this.eat=function(food){
+				console.log(this.page+"岁的"+this.pname+"正在吃"+food);
+			}
+		}
+		
+		
+		// 给所有的对象增加属性和方法
+		//给最终原型增加属性
+		Object.prototype.gender="男";
+		//给Person的原型增加一个方法
+		Object.prototype.sleep=function(){
+			console.log(this.page+"岁的"+this.gender+"孩儿"+this.pname+"正在睡觉");
+		}
+		var p1=new Person("张三",10);
+		p1.eat("蛋挞")
+		p1.sleep();
+		
+		var p2=new Person("李四",8);
+		p2.eat("牛角面包")
+		p2.sleep()
+		
+		
+		console.log(p1);
+		
+		console.log(p2);
+	</script>
+	</head>
+	<body>
+	</body>
+</html>

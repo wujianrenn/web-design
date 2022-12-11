@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title></title>
+                <script>
+                        
+                        var intervalIDS =new Array(); // [1,2,3 ]
+                        // 循环执行的定时器任务
+                        function startInterval(){
+                                // 2
+                                var intervalID = window.setInterval(
+                                        function(){
+                                                var today =new Date();
+                                                var hours=today.getHours();
+                                                var minutes=today.getMinutes();
+                                                var seconds =today.getSeconds();
+                                                var str = hours+"点"+minutes+"分"+seconds+"秒";
+                                                
+                                                var ta =document.getElementById("timeArea");
+                                                ta.value =str;
+                                        
+                                        },
+                                        1000
+                                );
+                                intervalIDS.push(intervalID);
+                        }
+                        function stopInterval(){
+                                while(intervalIDS.length >0){
+                                        window.clearInterval(intervalIDS.shift());
+                                }
+                                
+                                
+                        }
+                        
+                        var timeoutIDS =new Array();
+                        // 执行一次的定时器任务
+                        function startTimeout(){
+                                
+                                var timeoutID =window.setTimeout(
+                                        function(){
+                                                var today =new Date();
+                                                var hours=today.getHours();
+                                                var minutes=today.getMinutes();
+                                                var seconds =today.getSeconds();
+                                                var str = hours+"点"+minutes+"分"+seconds+"秒";
+                                                console.log(str)
+                                        
+                                        },
+                                        5000
+                                );
+                                
+                                timeoutIDS.push(timeoutID);
+                        }
+                        
+                        function stopTimeout(){
+                                while(timeoutIDS.length >0){
+                                        window.clearTimeout(timeoutIDS.shift());
+                                }
+                        }
+                        
+                </script>
+        </head>
+        <body>
+                <input type="text" id="timeArea" /> <br />
+                <input type="button" value="开始Interval" onclick="startInterval()" />
+                <input type="button" value="结束Interval" onclick="stopInterval()" />
+                <input type="button" value="开始timeout" onclick="startTimeout()" />
+                <input type="button" value="结束timeout" onclick="stopTimeout()" />
+        </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title></title>
+        </head>
+        <body>
+                <!--相对定位：
+                        相对元素自身所在的原来的位置进行定位。
+                        可以设置 left,right,top,bottom四个属性
+                        效果：在进行相对定位以后，元素原来所在的位置被保留了，被占用了--》保留站位其他元素的位置不会发生移动
+                        一般情况下，left和right不会同时使用  ,选择一个方向即可.top和bottom不会同时使用,选择一个方向即可
+                        优先级：左上>右下
+                -->
+				<!-- 相对定位的应用场合：
+					（1）元素在小范围移动的时候
+					（2）结合绝对定位使用 -->
+                <div style="width: 500px;height: 500px;background-color: pink;">
+                        <div style="width: 100px;height: 100px;background-color: bisque;"></div>
+                        <div style="width: 100px;height: 100px;background-color: yellow;position: relative;bottom: 10px;right: 20px;"></div>
+                        <div style="width: 100px;height: 100px;background-color: green;"></div>
+                </div>
+        </body>
+</html>

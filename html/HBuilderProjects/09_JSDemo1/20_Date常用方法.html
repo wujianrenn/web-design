@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			/*
+			 * 在程序中 西方的月份编号从0开始
+			 * 1 2 3 4 5 6 
+			 * 0 1 2 3 4 5
+			 * */
+			var today = new Date()
+			var d1 = new Date("October 13, 1975 11:13:00")
+			var d2 = new Date(79,5,24)
+			var d3 = new Date(79,5,24,11,33,0)
+			console.log(d1);
+			console.log(d2);
+			console.log(d3);
+			
+			
+			var d4 = new Date(2048,0,13,16,51,20,123)
+			console.log(d4)
+			// set***  略自己尝试一下
+			console.log(d4.getYear());// 和1900年的年份差
+			console.log(d4.getFullYear());// 完整的年份
+			console.log(d4.getMonth());
+			console.log(d4.getDate());
+			console.log(d4.getHours());
+			console.log(d4.getMinutes());
+			console.log(d4.getSeconds());
+			console.log(d4.getMilliseconds());
+			var d5 = new Date(2048,0,13,16,51,20,456)
+			console.log(d4<d5)
+			
+			
+			// 关于日期对象格式化处理
+			/*date对象的格式化方法*/
+			/*修改Date原型,添加一个format格式化的方法*/
+			Date.prototype.format = function(fmt){
+			  var o = {
+				"M+" : this.getMonth()+1,                 //月份
+				"d+" : this.getDate(),                    //日
+				"h+" : this.getHours(),                   //小时
+				"m+" : this.getMinutes(),                 //分
+				"s+" : this.getSeconds(),                 //秒
+				"q+" : Math.floor((this.getMonth()+3)/3), //季度
+				"S"  : this.getMilliseconds()             //毫秒
+			  };
+			
+			  if(/(y+)/.test(fmt)){
+				fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+			  }
+					
+			  for(var k in o){
+				if(new RegExp("("+ k +")").test(fmt)){
+				  fmt = fmt.replace(
+					RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));  
+				}       
+			  }
+			  return fmt;
+			}
+			
+			
+			var fmt=d4.format("yyyy-MM-dd hh:mm:ss");
+			console.log(fmt)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="utf-8">
+                <title></title>
+                <style>
+                        #d1 {
+                                width: 200px;
+                                height: 200px;
+                                background-color: yellow;
+                        }
+                </style>
+                <script type="text/javascript" src="js/jquery.min.js"></script>
+                <script>
+                        $(function(){
+                                
+                                //$("").animate({动画内容},执行时间,动画结束后要执行的方法)
+                                
+                                $("#d1").animate({
+                                        width:"100px",
+                                        height:"100px",
+                                        opcity:0.5,//半透明
+                                        borderRadius:"50px"//倒角，半径为50像素
+                                },2000,function(){
+                                        alert("动画执行结束了")
+                                })
+                        })
+                </script>
+        </head>
+        <body>
+                <div id="d1"></div>
+        </body>
+</html>

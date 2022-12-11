@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*第一种
+			 *创建了一个空数组 new Array();
+			 * */
+			var arr=new Array();
+			arr[0]=1;
+			console.log(arr);
+			
+			/*
+			 *第二种
+			 * 创建定长数组 new Array(5);
+			 * */
+			var arr2=new Array(5);
+			arr2[0]="x";
+			arr2[4]=true;
+			console.log(arr2);
+			
+			
+			/*
+			 * 第三种创建语法
+			 * 创建时,直接指定元素值
+			 * */
+			var arr3=new Array("asdf",10,20.3,true);
+			console.log(arr3);
+			
+			
+			/*
+			 *第四种语法
+			 * 相当于第三种语法的简写
+			 * */
+			var arr4=["asdf",10,20.3,true];
+			console.log(arr4);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

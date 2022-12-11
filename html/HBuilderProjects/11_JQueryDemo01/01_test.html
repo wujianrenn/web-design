@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+         <title></title>
+         <style type="text/css">
+             .a {
+                  background-color:  greenyellow;
+             }
+             .b {
+                  background-color:  yellowgreen;
+             }
+             .c {
+                  background-color: yellow;
+             }
+         </style>
+         <script type="text/javascript">
+             //页面加载后调用一个匿名函数 
+             window.onload = function() {
+                  //获取所有的行 
+                  var arr = document.getElementsByTagName("tr");
+                  //对所有的行动态实现隔行变色   
+                  for(var i = 0; i < arr.length; i++) {
+                      if(i == 0) {
+                          arr[i].className   = "a";
+ 
+                      }   else if(i % 2 == 1) {
+                          arr[i].className   = "b";
+                      }   else {
+                          arr[i].className   = "c";
+                      }
+                  }
+             }
+         </script>
+    </head>
+    <body>
+         <table class="datalist">
+             <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Class</th>
+                  <th scope="col">Birthday</th>
+                  <th scope="col">Constellation</th>
+                  <th scope="col">Mobile</th>
+             </tr>
+             <tr>
+                  <td>isaac</td>
+                  <td>W13</td>
+                  <td>Jun   24th</td>
+                  <td>Can</td>
+                  <td>1118159</td>
+             </tr>
+             <tr>
+                  <td>fresheggs</td>
+                  <td>W610</td>
+                  <td>Nov   5th</td>
+                  <td>Scorpio</td>
+                  <td>1038818</td>
+             </tr>
+             <tr>
+                  <td>girlwing</td>
+                  <td>W210</td>
+                  <td>Sep   16th</td>
+                  <td>Virgo</td>
+                  <td>1307994</td>
+             </tr>
+             <tr>
+                  <td>tastestory</td>
+                  <td>W15</td>
+                  <td>Nov   29th</td>
+                  <td>Sagittarius</td>
+                  <td>1095245</td>
+             </tr>
+         </table>
+    </body>
+</html>

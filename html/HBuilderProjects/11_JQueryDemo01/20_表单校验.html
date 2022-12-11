@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单校验</title>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			function checkUsername(){
+				var username = $("#user").val();
+				if(username == ""){//不能为空字符串
+					$("#usertrip").html("<font color='red'>不能为空<font>");
+					return false;
+				}
+				
+				if(username.length <= 6){//长度不能少于6位
+					$("#usertrip").html("<font color='red'>长度不能少于6位<font>")
+					return false
+				}
+				
+				for(var i = 0;i<username.length;i++){
+					var c =username.charAt(i)
+					if(c <='9' && c >='0'){
+						$("#usertrip").html("<font color='red'>不能使用数字<font>")
+						return false;
+					}
+				}
+				
+				//提示OK
+				$("#usertrip").html("<font color='green'>OK<font>")
+				return true;
+			}
+			
+			 function checkPassword(){
+				var pwd =$("#pwd").val();
+				if(pwd.length<5){
+					$("#pwdtip").html("<font color='red'>长度不能少于5位</font>");
+					return false;
+				}
+				$("#pwdtip").html("<font color='green'>OK</font>");
+				return true;
+			}
+			
+			function checkRepwd(){
+				var p1=$("#pwd").val();
+				var p2=$("#repwd").val();
+				
+				if(p1.length< 5 || p1 != p2){
+				   $("#repwdtip").html("<font color='red'>两次密码不一致</font>");
+				   return false;
+				}
+				
+			   $("#repwdtip").html("<font color='green'>OK</font>");
+			   return true;
+			}
+			
+			function checkEmail(){
+				var em=$("#email").val();
+				var index1=em.indexOf("@");
+				var index2=em.indexOf(".");
+				if(index1<1 || index2 < 1 ){
+					$("#emailtip").html("<font color='red'>邮箱格式有误</font>");
+					return false;
+				}
+				$("#emailtip").html("<font color='green'>OK</font>");
+				return true;
+			}
+			
+			function checkForm(){
+				return checkUsername()&&checkPassword()&&checkRepwd()&&checkEmail();
+			}
+		</script>
+	</head>
+	<body>
+		<table id="center" border="0" cellspacing="0" cellpadding="0">
+			<form action="https://www.baidu.com" method="get" onsubmit="return checkForm()" >
+				<tr>
+					<td>您的姓名：</td>
+					<td>
+						<input type="text" name="username" id="user" onblur="checkUsername()">
+						<div id="usertrip" style="display: inline;"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>输入密码：</td>
+					<td>
+						<input type="password" name="pwd" id="pwd" onblur="checkPassword()">
+						<div id="pwdtip" style="display: inline;"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>再输入一遍密码：</td>
+					<td>
+						<input type="password" id="repwd" onblur="checkRepwd()">
+						<div id="repwdtip" style="display: inline;"></div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>您的Email：</td>
+					<td>
+						<input type="text" id="email" onblur="checkEmail()">
+						<span id="emailtip"></span>
+					</td>
+				</tr>
+				
+				<tr>
+					<td colspan="2">
+						<input type="submit" value="注册" class="rb1" />
+					</td>
+				</tr>
+			</form>
+		</table>
+	</body>
+</html>

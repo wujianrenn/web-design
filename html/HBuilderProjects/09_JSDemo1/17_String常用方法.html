@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 根据索引获取字符
+			/*var str ="hello js";
+			var c =str.charAt(6);
+			console.log(c)*/
+			
+			// 拼接字符串
+			
+			var a="hi";
+			var b="good";
+			var c ="China";
+			
+			var d=c.concat(a,b);
+			console.log(d)
+			
+			
+			var e ="adsf";
+			var f=e.repeat(3);
+			console.log(f)
+			
+			
+			// 截取字符串
+			var g="helloJhon";
+			var h=g.substr(1,5);// 从哪里开始,连续截取多少个字符
+			console.log(h)
+			// 包头不包尾
+			var i=g.substring(1,7);// 从哪里开始,到哪里结束
+			console.log(i)
+			
+			// 获取长度
+			console.log(g.length)// length属性
+			
+			
+			// JS中非常特殊的一个函数,可以将一段字符串当做JS代码来执行
+			// 将字符串内容解析称JS代码并运行
+			var testStr=" var x =10 ";
+			eval(testStr);
+			console.log(x)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

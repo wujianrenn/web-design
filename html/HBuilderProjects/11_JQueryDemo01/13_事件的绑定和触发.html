@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="UTF-8">
+         <title></title>
+         <style>
+             #d1{
+                  width: 200px;
+                  height: 200px;
+                  border: 1px solid red;
+             }
+         </style>
+         <script type="text/javascript"   src="js/jquery.min.js"   ></script>
+         <script>
+             function fun1(){
+                //给元素绑定事件
+                //原生JS
+                /*var div1=document.getElementById("d1")
+                div1.onmouseover=function (){
+                	alert("悬停")
+                }*/
+               
+               
+               /* bind 方法绑定事件
+                * 在jQuery中,事件的名称= 原始名称去掉 on
+                * onclick       click
+                * onmouseover   mouseover
+                * 
+                * */
+                $("#d1").bind('mouseover',function(){
+                	$('#d1').css("background-color",'yellow')
+                });
+                
+                /*事件名作为方法*/
+                $("#d1").mouseleave(function(){
+                	$('#d1').css("background-color",'lightgreen')
+                });
+				//以上两种方法均可。以bind方法和以事件名为方法。
+                
+				
+                /*
+                 * one 绑定事件一次 
+                 * 
+                 * */
+                /*$("#d1").one('mouseover',function(){
+                	$('#d1').css("background-color",'yellow')
+                });
+                
+                 $("#d1").one('mouseleave',function(){
+                	$('#d1').css("background-color",'lightgreen')
+                });*/
+               
+                
+             }
+             function fun2(){
+             	//$("#d1").unbind();  接触绑定的所有事件
+             	$("#d1").unbind("mouseover") // 接触绑定的指定事件
+                 
+             }
+             function fun3(){
+                 // 相当于发生了获得焦点事件
+                 $("#i1").focus()
+             }
+             function fun4(){
+                 console.log("获得焦点了")
+             }
+         </script>
+    </head>
+    <body>
+         <div id='d1'>
+         	
+         </div>
+         <input type="button"   value="添加事件" onclick="fun1()" />
+         <input type="button"   value="解除绑定" onclick="fun2()" />
+         <br />
+         <input type="text"  id='i1' onfocus="fun4()"/>
+         <input type="button"   value="触发事件" onclick="fun3()" />
+    </body>
+</html>

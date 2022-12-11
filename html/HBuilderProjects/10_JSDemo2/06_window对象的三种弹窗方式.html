@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function fun1(){
+				// 如果是使用window对象调用的方法和访问的属性，那么window对象都可以省略不写
+				window.alert("你好呀")//普通信息提示框
+				
+				var con = window.confirm("真的要删除它吗")
+				console.log(con);
+				
+				var message = window.prompt("请输入它的名字","例如：张三")//信息输入框
+				console.log(message)
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="测试按钮" onclick="fun1()">
+	</body>
+</html>

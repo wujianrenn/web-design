@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title></title>
+                <script type="text/javascript" src="js/jquery.min.js"></script>
+                <script>
+                        function checkUsername(){
+                                var reg1=/^\D{6,}$/
+                                var username =$("#user").val();
+                                if(!reg1.test(username)){
+                                        $("#usertip").html("<font color='red'>格式必须是至少六位的非数字</font>");
+                                        return false;
+                                }
+                                // 提示OK
+                                $("#usertip").html("<font color='green'>OK</font>")
+                                return true;
+                                
+                        }
+                        
+                        function checkPassword(){
+                                var reg2=/^\S{5,}$/
+                                var pwd =$("#pwd").val();
+                                if(!reg2.test(pwd)){
+                                        $("#pwdtip").html("<font color='red'>至少为5位非空格</font>");
+                                        return false;
+                                }
+                                $("#pwdtip").html("<font color='green'>OK</font>");
+                                return true;
+                        }
+                        
+                        function checkRepwd(){
+                                var p1=$("#pwd").val();
+                                var p2=$("#repwd").val();
+                                
+                                if(p1.length< 5 || p1 != p2){
+                                   $("#repwdtip").html("<font color='red'>两次密码不一致</font>");
+                                   return false;
+                                }
+                                
+                           $("#repwdtip").html("<font color='green'>OK</font>");
+                           return true;
+                        }
+                        
+                        function checkEmail(){
+                                var em=$("#email").val();
+                                var regex3 = /^\w{6,}@[0-9A-Za-z]{2,}(\.[a-zA-Z]{2,3}){1,2}$/; 
+                                if(!regex3.test(em) ){
+                                        $("#emailtip").html("<font color='red'>邮箱格式有误</font>");
+                                    return false;
+                                }
+                                $("#emailtip").html("<font color='green'>OK</font>");
+                                return true;
+                        }
+                        
+                        function checkForm(){
+                                return checkUsername()&&checkPassword()&&checkRepwd()&&checkEmail();
+                        }
+                </script>
+        </head>
+        <body>
+                <table id="center" border="0" cellspacing="0" cellpadding="0">
+                        <form action="http://www.baidu.com" method="get" onsubmit="return checkForm()">
+                                <tr>
+                                        <td>您的姓名：</td>
+                                        <td>
+                                                <input id="user" type="text" name="username" onblur="checkUsername()"/>
+                                                <div id="usertip" style="display: inline;"></div>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>输入密码：</td>
+                                        <td>
+                                                <input id="pwd" name="pwd" type="password" onblur="checkPassword()"/>
+                                                <div id="pwdtip" style="display: inline;"></div>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>再输入一遍密码：</td>
+                                        <td>
+                                                <input id="repwd" type="password" onblur="checkRepwd()"/>
+                                                <div id="repwdtip" style="display: inline;"></div>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>您的Email：</td>
+                                        <td>
+                                                <input id="email" type="text" onblur="checkEmail()"/>
+                                                <span id="emailtip"></span>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        
+                                        <td colspan="2">
+                                                <input type="submit" value="注册" class="rb1" />
+                                        </td>
+                                </tr>
+                        </form>
+                </table>
+        </body>
+</html>

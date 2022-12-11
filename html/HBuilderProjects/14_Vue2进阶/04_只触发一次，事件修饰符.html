@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{a}}</p>
+        <button @click.once="add">按我加1</button>
+        <!-- 不加once的话，可以不停的加下去。
+            加了once，就代表着只能加一次，执行一次 -->
+    </div>
+
+    <script src="js/Vue2.js"></script>
+    <script>
+        var vue = new Vue({
+            el:'#app',
+            data:{
+                a:100
+            },
+            methods:{
+                add(){
+                    this.a++
+                    console.log(this.a)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

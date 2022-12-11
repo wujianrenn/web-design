@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="utf-8" />
+                <title></title>
+         		<script>
+         			function fun1(){
+         				var outerDiv =document.getElementById("outerDiv"); 
+         				// 1000
+         				var left =Math.floor(Math.random()*1000)
+         				// 500
+         				var top =Math.floor(Math.random()*500)
+         				
+         				
+         				outerDiv.style.marginTop=top+"px";//在js中需要去掉"-"，将下一个首字母大写
+         				outerDiv.style.marginLeft=left+"px";
+         			}
+         			
+         			function  fun2(){
+         				alert("love you too")
+         			}
+         			
+         		</script>
+                <style>
+                        #outerDiv{
+                                width: 200px;
+                                height: 200px;
+                                border: 1px solid gold;
+                                background-color: gray;
+                                text-align: center;
+                                margin-top: 200px;
+                                margin-left: 200px;
+                        }
+                        #outerDiv input{
+                                width: 50px;
+                                height: 50px;
+                                margin: 20px;
+                        }
+                </style>
+        </head>
+        <body >
+                <div id="outerDiv">
+                        <h3>do you love me?</h3>
+                        <input type="button" value="是" onclick="fun2()"/>
+                        <input type="button" value="否" onmouseover="fun1()"/>
+                </div>
+        </body>
+</html>

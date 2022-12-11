@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>显示和隐藏</title>
+		<style type="text/css">
+			#d1{
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+				display: none;
+			}
+		</style>
+		
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+			function fun1(){
+				// $("#d1").show(2000,'swing',function(){
+				// 	alert('动画执行结束了')
+				// })
+				
+					$("#d1").show(500)
+			}
+				
+				
+			function fun2(){
+				$("#d1").hide(2000)
+			}
+			
+			function fun3(){
+				$("#d1").toggle(1000)
+			}
+		</script>
+	</head>
+	<body>
+		<div id="d1"></div>
+		<input type="button" value="show" onclick="fun1()">
+		<input type="button" value="hide" onclick="fun2()">
+		<input type="button" value="toggle" onclick="fun3()">
+	</body>
+</html>

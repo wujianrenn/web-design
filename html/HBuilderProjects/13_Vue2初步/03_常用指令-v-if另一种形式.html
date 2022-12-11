@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 当boo的值等于100的时候再显示 -->
+            <p v-if="boo == 100">我是第一行dom元素</p>
+            <button @click="add">按我加1</button>
+        </div>
+        <script src="js/Vue2.js"></script>
+        <script>
+            var vue = new Vue({
+                el: '#app',
+                data:{
+                    boo: 95
+                },
+                methods:{
+                    add(){
+                        this.boo++
+                    }
+                }
+            })
+        </script>
+    </body>
+    
+</html>

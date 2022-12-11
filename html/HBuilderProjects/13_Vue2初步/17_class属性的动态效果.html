@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS样式 -->
+    <style>
+        p{
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+        .red{
+            background:red;
+        }
+        .pink{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- //结构代码 -->
+    <div id="app" v-clock>
+        <div>
+            <p :class="{red:a >=5,pink: a>=10}">
+                {{a}}
+            </p>
+        </div>
+        <button @click="add">点击加1</button>
+        <button @click="minus">点击减1</button>
+
+        <p :class="{red:a >=5,pink: a>=10}">
+            {{a}}
+        </p>
+    </div>
+    <script src = "js/Vue2.js"></script>
+    <script>
+        var vue = new Vue({
+            el: "#app",
+            data: {
+                a: 0
+            },
+            methods:{
+                add(event) {
+                    this.a ++
+                },
+                minus(){
+                    this.a --
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

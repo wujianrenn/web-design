@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 180px;
+            height: 180px;
+            background: gold;
+            margin: 100px auto;
+            padding: 30px;
+            border-radius: 50%;
+        }
+
+        .outer .center{
+            width: 130px;
+            height: 130px;
+            background: pink;
+            padding: 30px;
+            border-radius: 50%;
+        }
+
+        .outer .center .inner{
+            width: 130px;
+            height: 130px;
+            background: cyan;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="outer" @click.capture="outer">
+            <div class="center" @click.capture="center">
+                <div class="inner" @click="inner">
+                    <!-- capture改变的是捕获顺序。
+                        正常来说点击内层。捕获到先是内层，打印顺序应该为：内层-夹层-外层
+                        但是在使用capture后，在本案例中，打印顺序为外层 -夹层-内层 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/Vue2.js"></script>
+    <script>
+        var vue = new Vue({
+            el:'#app',
+            methods:{
+                outer(){
+                    console.log("外层")
+                },
+                center(){
+                    console.log("夹层")
+                },
+                inner(){
+                    console.log("内层")
+                }
+            }
+        })
+    </script>
+</body>
+</html>
