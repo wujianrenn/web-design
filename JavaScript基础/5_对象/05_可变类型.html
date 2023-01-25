@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = 10 
+        let b = 10
+        a = 12 // 当我们为一个变量重新赋值时，绝对不会影响其他变量
+
+        // let obj = {name:"孙悟空"}
+        let obj = Object()
+        obj.name = "孙悟空"
+        obj.age = 18
+
+        let obj2 = Object()
+        let obj3 = Object()
+        // console.log(obj2 == obj3) // false
+
+        let obj4 = obj
+
+        obj4.name = "猪八戒" // 当修改一个对象时，所有指向该对象的变量都会收到影响
+
+        console.log("obj", obj)
+        console.log("obj4", obj4)
+        console.log(obj === obj4)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
