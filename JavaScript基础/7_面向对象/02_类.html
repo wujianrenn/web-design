@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // const Person = class {}
+
+        // Person类专门用来创建人的对象
+        class Person {
+
+        }
+        // Dog类式专门用来创建狗的对象
+        class Dog {
+
+        }
+        
+        const p1 = new Person()
+        const p2 = new Person()
+       
+        const d1 = new Dog()
+        const d2 = new Dog()
+
+        console.log(p1 instanceof Person)//调用构造函数创建对象
+        console.log(d1 instanceof Dog)//true
+        console.log(d1 instanceof Person)//false
+
+        const five = {
+                // 添加属性
+                name: "王老五",
+                age: 48,
+                height: 180,
+                weight: 100,
+
+                // 添加方法
+                sleep() {
+                    console.log(this.name + "睡觉了~")
+                },
+
+                eat() {
+                    console.log(this.name + "吃饭了~")
+                },
+            }
+
+            const yellow = {
+                name: "大黄",
+                age: 3,
+                sleep() {
+                    console.log(this.name + "睡觉了~")
+                },
+
+                eat() {
+                    console.log(this.name + "吃饭了~")
+                },
+            }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
