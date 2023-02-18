@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person {
+            name = '孙悟空'
+            age = 18
+
+            sayHello() {
+                console.log('Hello ,我是',this.name)
+            }
+        }
+
+        class Dog {}
+
+        const p = new Person()
+        const p2 = new Person()
+
+        p.sayHello = 'hello'
+
+        const d = new Dog()
+        const d2 = new Dog()
+
+        console.log(p)
+        console.log(p2)
+        console.log(p.__proto__ === p2.__proto__)
+
+
+        class Animal {
+
+        }
+
+        class Cat extends Animal{
+
+        }
+
+        class TomCat extends Cat {
+
+        }
+
+        // TomCat --> cat --> Animal实例 --> object --> Object原型 --> null
+
+        // cat --> Animal实例 --> object --> Object原型 --> null
+        // p对象 --> object --> Object原型 --> null
+        const cat = new Cat()
+
+        console.log(cat.__proto__.__proto__.__proto__.__proto__)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
