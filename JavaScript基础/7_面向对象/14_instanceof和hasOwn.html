@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Animal {}
+        class Dog extends Animal {}
+        const dog = new Dog()
+
+        // console.log(dog instanceof Dog) // true
+        // console.log(dog instanceof Animal) // true
+        // console.log(dog instanceof Object) // true
+
+        const obj = new Object()
+
+        // console.log(obj.__proto__)
+        // console.log(Object.prototype)
+
+        // dog.__proto__ / Dog.prototype
+
+        class Person {
+            name = "孙悟空"
+            age = 18
+
+            sayHello() {
+                console.log("Hello，我是", this.name)
+            }
+        }
+
+        const p = new Person()
+        // console.log("sayHello" in p)
+        // console.log(p.hasOwnProperty("sayHello"))
+        // console.log(p.__proto__.__proto__.hasOwnProperty("hasOwnProperty"))
+
+        console.log(Object.hasOwn(p, "sayHello"))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
