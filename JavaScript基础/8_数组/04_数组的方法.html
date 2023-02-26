@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(Array.isArray({name:'孙悟空'}))//false
+        console.log(Array.isArray([1,2,3]))//true
+
+        const arr = ['孙悟空','猪八戒','沙和尚','唐僧','白骨精']
+        console.log(arr.at(-2))//负数是从-1开始的，就是倒数第二个
+        console.log(arr[arr.length-2])//两者相同
+
+        const arr2 = ['白骨精','蜘蛛精','玉兔精']
+        let result = arr.concat(arr2,['牛魔王','铁扇公主'])
+        console.log(result)//相当于是合并了arr和arr2两个数组，顺便添加了两个值
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
