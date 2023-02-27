@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = ['孙悟空','猪八戒','沙和尚','唐僧','沙和尚']
+        
+        let result = arr.indexOf('沙和尚',3)//4,起始位置从位置3开始的（下标为2)，所以最后找到的是下标为4的
+        result = arr.lastIndexOf("沙和尚",3)//2,倒着找的，最后一次出现的位置为下标为2的地方
+        result = arr.indexOf("白骨精")
+
+        result = arr.join()//转换成字符串
+        result = arr.join("@_@")
+        result = arr.join("")//完全连接在一起了，没有逗号啥的
+
+        arr = ['孙悟空','猪八戒','沙和尚','唐僧']
+        result = arr.slice(0,2)
+        result = arr.slice(1,3)
+        result = arr.slice(1,-1)//到倒数第一个为止，所以只能取到倒数第二个沙和尚那
+        console.log(result)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
