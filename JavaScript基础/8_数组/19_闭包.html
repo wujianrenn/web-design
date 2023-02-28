@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = '全局变量a'
+
+        function fn(){
+            console.log(a)
+        }
+
+        function fn2(){
+            let a = 'fn2中的a'
+            fn()
+        }
+
+        fn2()//因为后来调用了方法fn()，该方法是定义在全局中的，所以调用的是'全局变量a'
+
+        function fn3(){
+            let a = 'fn3中的a'
+            function fn4(){
+                console.log(a)
+            }
+            return fn4;
+        }
+
+        let fn4 = fn3()
+        fn4()//得到的是fn3中的a，因为是定义在fn3中的
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fn(){
+            console.log('函数执行了~~~',this)
+        }
+
+        const obj = {name:'孙悟空',fn}
+
+        fn.call(obj)
+        fn.apply(console)
+
+        function fn2(a, b) {
+            console.log("a =", a, "b =", b, this)
+        }
+
+        // fn2.call(obj, "hello", true)
+        fn2.apply(obj, ["hello", true])
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

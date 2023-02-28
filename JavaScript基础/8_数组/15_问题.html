@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person {
+            constructor(name,age){
+                this.name = name;
+                this.age = age
+            }
+        }
+
+        const personArr = [
+            new Person('孙悟空',180),
+            new Person('沙和尚',36),
+            new Person('红孩儿',5),
+            new Person('白骨精',19),
+        ]
+
+        //filter()函数式用来对数组进行过滤的
+        function filter(arr, cb) {
+            const newArr = []
+
+            // console.log("-->", cb)
+            // cb()
+
+            for (let i = 0; i < arr.length; i++) {
+                // arr[i].age >= 18
+                // arr[i].age > 60
+                // arr[i].age > n
+                // arr[i].name === "xxx"
+                // arr[i] % 2 === 0
+                if (cb(arr[i])) {
+                    newArr.push(arr[i])
+                }
+            }
+
+            return newArr
+        }
+
+        function fn(a){
+            return a.name === "孙悟空"
+        }
+
+        result = filter(personArr, fn)
+        console.log(result)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

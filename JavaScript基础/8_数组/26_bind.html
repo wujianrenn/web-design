@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fn(a, b, c) {
+            console.log("fn执行了~~~~", this)//此处的this代指下面的obj
+            console.log(a, b, c)
+        }
+
+        const obj = {name:"孙悟空"}
+
+        const newFn = fn.bind(obj,10,20,30)
+        newFn()
+
+
+        const arrowFn = () => {
+            console.log(this)
+        }
+
+        // arrowFn.call(obj)
+        const newArrowFn = arrowFn.bind(obj)
+        newArrowFn()
+
+        class MyClass{
+            fn = () => {
+                console.log(this)
+            }
+        }
+
+        const mc = new MyClass()
+
+        // mc.fn.call(window)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

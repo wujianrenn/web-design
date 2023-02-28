@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = ["a", "c", "e", "f", "d", "b"]
+        arr = [2, 3, 1, 9, 0, 4, 5, 7, 8, 6, 10]
+
+        arr.sort((a,b) => a-b)
+        arr.sort((a,b) => b-a)
+
+        arr = ['孙悟空','猪八戒','沙和尚','唐僧']
+
+        arr.forEach((Element,index,array) => {
+            console.log(Element,index,array)//Element，放在前面打印时，没有单引号
+        })
+
+        arr.forEach((Element,index) => console.log(index,Element))//Element放在后面打印时，有单引号，作为一个整体
+
+        arr = [1,2,3,4,5,6,7,8]
+        //获取数组中的所有偶数
+        let result = arr.filter((ele) => ele > 5)
+        result = arr.map((ele) => ele * 2)
+
+        arr = ['孙悟空','猪八戒','沙和尚']
+        result = arr.map((ele) => '<li>' + ele + '</li>')
+        console.log(result)
+
+        arr = [1, 2, 3, 4, 5, 6, 7, 8]
+
+        result = arr.reduce((a, b) => {
+            /* 
+                1, 2
+                3, 3
+                6, 4
+                10, 5
+            */
+            // console.log(a, b)
+
+            return a * b
+        })
+        // result = arr.reduce((a, b) => a + b, 10)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

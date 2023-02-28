@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fn(){
+            console.log(arguments[2])//读取到下标为2的函数参数
+            console.log(Array.isArray(arguments))//false
+            for(let i = 0; i < arguments.length; i++){
+                console.log(arguments[i])
+            }
+
+            //上下两种循环效果一样
+
+            for(let v of arguments){
+                console.log(v)
+            }
+
+            // arguments.forEach((ele) => console.log(ele))//会报错？，暂时没找到原因
+        }
+        fn(1,10,23)
+
+        //定义一个函数，可以求任意个数值的和
+        function sum(){
+            //通过arguments,可以不受参数数量的限制更加灵活的创建函数
+            let result = 0;
+            for(let num of arguments){
+                result += num
+            }
+            return result
+        }
+
+
+        function fn2(...abc){
+            console.log(abc)
+        }
+
+        function sum2(...num){
+            return num.reduce((a,b) => a + b, 0)
+        }
+
+        // 当可变参数和普通参数一起使用时，需要将可变参数写到最后
+        function fn3(a, b, ...args) {
+            // for (let v of arguments) {
+            //     console.log(v)
+            // }
+
+            console.log(args)
+        }
+
+        fn3(123, 456, "hello", true, "1111")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

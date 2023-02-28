@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function outer(){
+            let someVariable = 'someValue'
+
+            return function(){
+                console.log(someVariable)
+            }
+        }
+
+        function outer2(){
+            let num = 0;
+            return () => {
+                num++
+                console.log(num)
+            }
+        }
+
+        let fn1 = outer2()//独立闭包
+        let fn2 = outer2()
+
+        fn1()
+        fn2()
+
+        fn1 = null
+        fn2 = null
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
