@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const obj = {name:'孙悟空',age:18,gender:'男'}
+
+        // let {name,age,gender} = obj // 声明变量同时解构对象
+
+        let name,age,gender
+        ;({name,age,gender} = obj)//如果不加小括号的话，会被JS认为是代码块，但是加了小括号之后还需要添加分号，防止JS误认
+
+        let {address} = obj;//没有的属性返回undefined
+        console.log(name,age,gender,address)
+
+        let {name: a,age: b,gender: c,address: d='花果山'} = obj
+        console.log(a,b,c,d)
+</script>
+</head>
+<body>
+    
+</body>
+</html>
