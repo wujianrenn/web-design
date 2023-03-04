@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const obj = {
+            name: '孙悟空',
+            age: 13,
+        }
+
+        //将obj转换成JSON字符串
+        const str = JSON.stringify(obj)//JSON.stringify() 可以将一个对象转换成JSON字符串
+
+        const obj2 = JSON.parse(str) //JSON.parse() 可以将一个JSON格式的字符串转换为JS对象
+
+        // console.log(obj)
+        // console.log(str) // {"name":"孙悟空","age":18}
+        // console.log(obj2)
+
+        const str2 = `{'name': '孙悟空','age': '13'}`
+        const str3 = '{}'
+        const str4 = '["hello",true,[]]'
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
