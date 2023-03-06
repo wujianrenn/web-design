@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const obj2 = {}
+        const obj = {
+            'name':'孙悟空',
+            'age': 18,
+            [Symbol()] : '哈哈',
+            [obj2] : '嘻嘻'
+        }    
+        console.log(obj)
+
+
+        //创建一个Map
+        const map = new Map()
+        map.set('name','孙悟空')
+        map.set(obj2,'呵呵');
+        map.set(NaN,'哈哈哈')
+
+        map.delete(NaN)
+        // map.clear()
+        
+        console.log(map)
+        console.log(map.get('name'))//孙悟空
+        console.log(map.has('name'))//true
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
