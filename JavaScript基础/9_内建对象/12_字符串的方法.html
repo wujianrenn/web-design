@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let str = 'hello'
+        console.log(str[0])
+
+        for(let char of str){
+            console.log(char)
+        }
+
+        console.log(str.at(0))
+        console.log(str.charAt(0))
+
+        str = 'hello hello how are you'
+
+        console.log(str.includes('how',13))
+        console.log(str.endsWith('you'))
+
+        str = '100'
+        console.log(str.padStart(1,'0'))
+
+        str = 'hello hello how are you'
+        let result = str.replace('hello','abc')//代替一个
+        console.log(result)
+        result = str.replaceAll('hello','abc')//代替所有
+
+        result = str.slice(12, 15)
+        result = str.substring(12, 15)
+        result = str.substring(15, 12)
+
+        str = "abc@bcd@efg@jqk" // ["abc", "bcd", "efg", "jqk"]
+        result = str.split("@")
+        str = "abcdABCD"
+
+        result = str.toLowerCase()
+        str = "    ab  c     "
+        console.log(result)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
