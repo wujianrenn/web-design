@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let re = /abc|bcd/
+        re = /[a-z]/
+        re = /[A-Z]/
+        re = /[A-Za-z]/
+        re = /[a-z]/i // 匹配模式i表示忽略大小写
+        re = /[^a-z]/ // 匹配包含小写字母以外内容的字符串
+        re = /./
+        re = /\./
+
+        re = /\w/
+        re = /^a/ // 匹配开始位置的a
+        re = /a$/ // 匹配结束位置的a
+        re = /^a$/ // 只匹配字母a，完全匹配，要求字符串必须和正则完全一致
+        re = /^abc$/
+        let result = re.test('aa')
+        console.log(result)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

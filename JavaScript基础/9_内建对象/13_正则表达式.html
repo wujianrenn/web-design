@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let reg = new RegExp('a','i')//通过一个构造函数来创建一个正则表达式的对象
+
+        //使用字面量来创建正则表达式:/正则/匹配模式
+        reg = /a/i
+        reg = /\w/
+        reg = new RegExp('\\w')
+        console.log(reg)
+
+        reg = new RegExp('a')//  /a/表示，检查一个字符串中是否有a
+        
+        // 通过正则表达式检查一个字符串是否符合规则
+        let str = "a"
+
+        let result = reg.test(str) // true
+
+        result = reg.test("b") // false
+        result = reg.test("abc") // true
+        result = reg.test("bcabc") // true
+
+        reg = /a/
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
