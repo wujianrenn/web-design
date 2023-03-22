@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点我一下</button>
+    <hr>
+    <span class="s1">我是span</span>
+    <span class="s1">我是span</span>
+    <span class="s1">我是span</span>
+    <span class="s1">我是span</span>
+    <span class="s1">我是span</span>
+
+    <div>我是div</div>
+    <div>我是div</div>
+    <div>我是div</div>
+    <div>我是div</div>
+    <div>我是div</div>
+
+    <form>
+        <input type="text" name="username">
+
+        <input type="radio" name="gender" value="male"> 男
+        <input type="radio" name="gender" value="female"> 女
+    </form>
+
+    <script>
+            const btn = document.getElementById("btn")
+
+            const spans = document.getElementsByClassName("s1")
+
+            const divs = document.getElementsByTagName("div")
+
+            const genderInput = document.getElementsByName("gender")
+
+            const divs2 = document.querySelectorAll("div")
+
+            const div = document.querySelector("div")
+
+            const h2 = document.createElement("h2")
+
+            console.log(spans)
+
+            for(let i=0; i<spans.length; i++){
+                // alert(spans[i])
+                spans[i].innerText = "哈哈哈"+i
+            }
+    </script>
+</body>
+</html>
