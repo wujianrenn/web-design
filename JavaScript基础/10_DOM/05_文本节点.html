@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1">
+        <span style="text-transform: uppercase;">我是box1</span>
+    </div>
+
+
+    <script>
+        const box1 = document.getElementById('box1')
+
+        const text = box1.firstChild
+        console.log(text)
+
+        // box1.innerText = "xxxx"
+        // console.log(box1.textContent)
+
+        // box1.textContent = "新的内容"
+
+        /* box1.innerHTML = "<、script src='https://sss/sss.js'><\/script>" */
+    </script>
+</body>
+</html>
