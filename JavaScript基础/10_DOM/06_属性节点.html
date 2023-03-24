@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="a" type="text" name="username" id="admin">
+
+    <script>
+        // const input = document.getElementsByName('uesrname')
+        const input = document.querySelector('[name=username]')
+        console.log(input.type)
+
+        console.log(input.getAttribute('type'))
+
+        input.setAttribute('value','孙悟空')
+        input.setAttribute('disable','disable')
+    </script>
+</body>
+</html>
