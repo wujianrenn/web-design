@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1" onmouseenter="alert('你点我干嘛~')">点我一下</button>
+    <button id="btn">点我一下</button>
+
+    <script>
+        //获取到按钮对象
+        const btn = document.getElementById('btn')
+        //为按钮对象的事件属性设置响应函数
+        // btn.onclick = function(){
+        //     alter('哈哈哈')
+        // }
+
+        // btn.onclick = function(){
+        //     alter('12343252')
+        // }
+
+        btn.addEventListener('click',function(){
+            alert('哈哈哈')
+        })
+
+        btn.addEventListener('click',function(){
+            alert('呜呜呜')
+        })
+
+        btn.addEventListener('click',function(){
+            alert('嘻嘻嘻')
+        })
+    </script>
+</body>
+</html>
