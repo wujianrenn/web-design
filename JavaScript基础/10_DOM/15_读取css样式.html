@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            background-color: #bfa;
+        }
+
+        .box1::before {
+            content: 'hello';
+            color:red
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">点我一下</button>
+
+    <hr>
+
+    <div class="box1"></div>
+
+    <script>
+        const btn = document.getElementById("btn")
+        const box1 = document.querySelector(".box1")
+
+        btn.onclick = function(){
+            const styleObj = getComputedStyle(box1)
+
+            console.log(styleObj.width)
+            console.log(styleObj.left)
+
+            console.log(parseInt(styleObj.width) + 100 + 'px')
+            console.log(styleObj.backgroundColor)
+
+            const beforeStyle = getComputedStyle(box1,'::before')
+            console.log(beforeStyle.color)//返回的是rgb数值
+
+            console.log(box1.firstElementChild)
+        }
+    </script>
+</body>
+</html>
