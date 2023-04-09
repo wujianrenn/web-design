@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 200px;
+            height: 200px;
+            padding: 50px;
+            margin: 50px;
+            border: 10px red solid;
+            background-color: #bfa;
+            overflow: auto;
+        }
+
+        #box2 {
+            width: 100px;
+            height: 500px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">点我一下</button>
+    <hr>
+    <div>
+        <div id="box1">
+            <div id="box2"></div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('btn')
+        const box1 = document.getElementById('box1')
+
+        btn.onclick = function(){
+            console.log(box1.scrollHeight)
+            console.log(box1.scrollWidth)
+
+            console.log(box1.offsetParent)
+
+            console.log(box1.offsetLeft)
+            console.log(box1.offsetTop)
+
+            console.log(box1.scrollTop)
+        }
+    </script>
+</body>
+</html>
