@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+
+
+        .box2{
+            background-color: yellow;
+            width: 300px;
+            height: 500px;
+            border: 10px greenyellow solid;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">点我一下</button>
+    <hr>
+    <div class="box1 box3 box4"></div>
+
+    <script>
+        //点击按钮后，修改box1的宽度
+        const btn = document.getElementById("btn")
+        const box1 = document.querySelector(".box1")
+
+        btn.onclick = function(){
+            //除了直接修改样式外，也可以通过修改class属性来间接的修改样式
+            // box1.className += 'box2'
+
+            // box1.classList.add('box2','box3','box4')
+            // box1.classList.add('box1')
+
+            // box1.classList.remove('box2')
+            box1.classList.toggle('box2')
+            // box1.classList.replace('box2')
+
+            let result = box1.classList.contains('box3')
+            console.log(result)
+        }
+    </script>
+</body>
+</html>
