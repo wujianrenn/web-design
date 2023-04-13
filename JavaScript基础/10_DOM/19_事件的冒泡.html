@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 300px;
+            height: 300px;
+            background-color: greenyellow;
+        }
+
+        #box2 {
+            width: 250px;
+            height: 250px;
+            background-color: #ff0;
+        }
+
+        #box3 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <div id="box2">
+            <div id="box3"></div>
+        </div>
+    </div>
+
+    <a id="chao" href="https://lilichao.com">超链接</a>
+
+    <script>
+            const box1 = document.getElementById("box1")
+            const box2 = document.getElementById("box2")
+            const box3 = document.getElementById("box3")
+            const chao = document.getElementById("chao")
+
+            chao.addEventListener('click',(event)  =>{
+                event.preventDefault();
+                alert('被点了一下')
+            })
+
+            box1.addEventListener('click',function (event){
+                alert(event)
+                console.log(event.target)//event.target 表示的是触发事件的对象
+                console.log(this)//this 绑定事件的对象
+                console.log(event.currentTarget)
+
+                alert("hello 我是box1")
+            })
+
+            box2.addEventListener('click',function(event){
+                event.stopPropagation()
+                alert('我是box2')
+            })
+
+            box3.addEventListener('click',function(event){
+                event.stopPropagation()//取消事件的传导
+                alert('我是box3')
+            })
+    </script>
+</body>
+</html>
