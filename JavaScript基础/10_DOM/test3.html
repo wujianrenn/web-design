@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #christmas-tree {
+            position: relative;
+            width: 200px;
+            height: 400px;
+        }
+
+        .star {
+        position: absolute;
+        top: -20px;
+        left: 90px;
+        width: 20px;
+        height: 20px;
+        background-color: yellow;
+        border-radius: 50%;
+        }
+
+        .trunk {
+        position: absolute;
+        bottom: 0;
+        left: 95px;
+        width: 10px;
+        height: 40px;
+        background-color: brown;
+        }
+
+        .layer {
+        position: absolute;
+        bottom: 40px;
+        width: 160px;
+        height: 160px;
+        border-radius: 80px;
+        background-color: green;
+        }
+
+        .layer1 {
+        left: 20px;
+        }
+
+        .layer2 {
+        left: 40px;
+        }
+
+        .layer3 {
+        left: 60px;
+        }
+    </style>
+    <script>
+        const tree = document.querySelector('#christmas-tree');
+
+        // 随机生成圣诞装饰品的颜色
+        const getRandomColor = () => {
+        const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+        return colors[Math.floor(Math.random() * colors.length)];
+        };
+
+        // 在       
+    </script>
+</head>
+<body>
+    <div id="christmas-tree">
+        <div class="star"></div>
+        <div class="trunk"></div>
+        <div class="layer layer1"></div>
+        <div class="layer layer2"></div>
+        <div class="layer layer3"></div>
+      </div>
+</body>
+</html>
