@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: pink;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>亲爱的XXX，我爱你</h1>
+  <p>你是我生命中最美好的事物，我希望能和你永远在一起。</p>
+  <button onclick="playLoveSong()">播放浪漫情歌</button>
+
+  <audio id="love-song" src="https://example.com/love-song.mp3"></audio>
+  <script>
+    function playLoveSong() {
+      var audio = document.getElementById("love-song");
+      audio.play();
+    }
+  </script>
+</body>
+</html>
